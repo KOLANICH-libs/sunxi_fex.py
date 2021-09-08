@@ -1,0 +1,53 @@
+/dts-v1/;
+
+/ {
+	soc@<addr> {
+		test {
+			kaitai = "struct";
+			version = <0x18894>;
+			is_awesome;
+		}
+		ports {
+			python {
+				data = <0x4>;
+				drive = <0x3>;
+				idx = <0x1>;
+				muxsel = <0x1>;
+				port = <0x1>;
+				pull = <0x2>;
+			};
+			js {
+				data = <0xffffffff>;
+				drive = <0x3>;
+				idx = <0x1>;
+				muxsel = <0x1>;
+				port = <0x2>;
+				pull = <0x2>;
+			};
+			scala {
+				data = <0xffffffff>;
+				drive = <0xffffffff>;
+				idx = <0x1>;
+				muxsel = <0x1>;
+				port = <0x3>;
+				pull = <0x2>;
+			};
+			java {
+				data = <0xffffffff>;
+				drive = <0xffffffff>;
+				idx = <0x1>;
+				muxsel = <0x1>;
+				port = <0x4>;
+				pull = <0xffffffff>;
+			};
+			rust {
+				data = <0xffffffff>;
+				drive = <0xffffffff>;
+				idx = <0x1>;
+				muxsel = <0xffffffff>;
+				port = <0xffff>;
+				pull = <0xffffffff>;
+			};
+		}
+	};
+};

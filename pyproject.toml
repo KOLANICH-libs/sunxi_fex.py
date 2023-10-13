@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61.2.0", "wheel", "setuptools_scm[toml]>=3.4.3", "kaitaiStructCompile[toml]"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sunxi_fex"
+authors = [{name = "KOLANICH"}]
+description = "A parser for sunxi fex format"
+readme = "ReadMe.md"
+keywords = ["sunxi_fex"]
+license = {text = "GPL-3.0-or-later"}
+classifiers = [
+	"Programming Language :: Python",
+	"Programming Language :: Python :: 3",
+	"Development Status :: 4 - Beta",
+	"Environment :: Other Environment",
+	"Intended Audience :: Developers",
+	"License :: OSI Approved",
+	"License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)",
+	"Operating System :: OS Independent",
+	"Topic :: Software Development :: Libraries :: Python Modules",
+]
+urls = {Homepage = "https://codeberg.org/KFmts/sunxi_fex.py"}
+requires-python = ">=3.4"
+dependencies = ["kaitaistruct"]
+dynamic = ["version"]
+
+[tool.additional-dependencies]
+cli = ["plumbum"]
+
+[tool.setuptools]
+zip-safe = true
+include-package-data = false
+
+[tool.setuptools.packages]
+find = {namespaces = false}
+
+[tool.setuptools_scm]
+
+[tool.kaitai.repos."https://codeberg.org/KFmts/kaitai_struct_formats.git"."sunxi_fex"]
+update = true
+localPath = "kaitai_struct_formats" # rel to pyproject.toml dir
+outputDir = "sunxi_fex/kaitai" # rel to localPath
+
+[tool.kaitai.repos."https://codeberg.org/KFmts/kaitai_struct_formats.git"."sunxi_fex".formats.sunxi_fex]
+path = "firmware/sunxi_fex"

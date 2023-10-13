@@ -1,0 +1,40 @@
+test:
+  kaitai: struct
+  version: 100500
+  is_awesome: true
+ports:
+  python:
+    data: 4
+    drive: 3
+    idx: 1
+    muxsel: 1
+    port: 1
+    pull: 2
+  js:
+    data: 4294967295
+    drive: 3
+    idx: 1
+    muxsel: 1
+    port: 2
+    pull: 2
+  scala:
+    data: 4294967295
+    drive: 4294967295
+    idx: 1
+    muxsel: 1
+    port: 3
+    pull: 2
+  java:
+    data: 4294967295
+    drive: 4294967295
+    idx: 1
+    muxsel: 1
+    port: 4
+    pull: 4294967295
+  rust:
+    data: 4294967295
+    drive: 4294967295
+    idx: 1
+    muxsel: 4294967295
+    port: 65535
+    pull: 4294967295
